@@ -4,4 +4,4 @@ A simple matplotlib and numpy based dotplot generator for text matrices containi
 
 ## Use
 
-Just run "python dotplot.py" while making sure that there is a "matrix.txt" in the folder
+Just run "python dotplot.py" while making sure that there is a "dotplot.txt" in the folder

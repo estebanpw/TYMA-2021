@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-input = np.loadtxt("matrix.txt", dtype='i', delimiter=' ')
+input = np.loadtxt("dotplot.txt", dtype='i', delimiter=' ')
 
 mshape = input.shape
 
@@ -20,4 +20,4 @@ bordermat[:,-1] = 1
 
 bordermat[1:-1,1:-1] = input[:,:]
 
-plt.imsave("matrix.png", bordermat, cmap='gray_r')
+plt.imsave("dotplot.png", bordermat, cmap='gray_r')
