@@ -53,6 +53,8 @@ int main(int argc, char ** av){
     
     
     // Close and exit
+    free(s_query);
+    free(s_ref);
     fclose(dotplot);
 
     return 0;
