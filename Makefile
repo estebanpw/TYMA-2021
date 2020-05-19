@@ -5,4 +5,4 @@ BIN=./
 all: generate_dotplot
 
 generate_dotplot: generate_dotplot.c
-	$(CC) $(CFLAGS) generate_dotplot.c -o $(BIN)/generate_dotplot
+	$(CC) $(CFLAGS) generate_dotplot.c common.c -o $(BIN)/generate_dotplot

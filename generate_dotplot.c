@@ -1,13 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <string.h>
-#include <ctype.h>
-#include <inttypes.h>
+#include "common.h"
 
-uint32_t get_seq_len(FILE * f);
-uint32_t load_seq(FILE * f, char * seq);
-char * read_sequence(FILE * f, uint32_t * slen);
 
 int main(int argc, char ** av){
     
@@ -27,10 +19,10 @@ int main(int argc, char ** av){
     
     // Load sequences
     uint32_t l_query;
-    char * s_query = read_sequence(query, &l_query);
+    char * s_query = load_seq(query, &l_query);
     
     uint32_t l_ref;
-    char * s_ref = read_sequence(ref, &l_ref);
+    char * s_ref = load_seq(ref, &l_ref);
     
     // Close input sequences since they are already in memory
     fclose(query);
@@ -59,58 +51,4 @@ int main(int argc, char ** av){
 
     return 0;
     
-}
-
-char * read_sequence(FILE * f, uint32_t * slen){
-    
-    char * s = NULL;
-    
-    // Get sequence length and allocate memory
-    uint32_t l = get_seq_len(f);
-    s = (char *) malloc(l * sizeof(char));
-    if(s == NULL) { fprintf(stderr, "Error allocating sequence memory\n"); exit(-1); } 
-    
-    // Load sequence into char array
-    load_seq(f, s);
-    
-    // Return pointer to sequence
-    *slen = l;
-    return s;
-    
-}
-
-
-uint32_t get_seq_len(FILE * f) {
-    char c = '\0';
-    uint32_t l = 0;
-    while(!feof(f)){
-        c = getc(f);
-        if(c == '>'){
-            while(c != '\n') c = getc(f);
-        }
-        c = toupper(c);
-        if(c >= 'A' && c <= 'Z'){
-            ++l;
-        }
-    }
-    rewind(f);
-    return l;
-}
-
-uint32_t load_seq(FILE * f, char * seq) {
-    char c = '\0';
-    uint32_t l = 0;
-    while(!feof(f)){
-        c = getc(f);
-        if(c == '>'){
-            while(c != '\n') c = getc(f);
-        }
-        c = toupper(c);
-        if(c >= 'A' && c <= 'Z'){
-            seq[l] = c;
-            ++l;
-        }
-    }
-    rewind(f);
-    return l;
 }
