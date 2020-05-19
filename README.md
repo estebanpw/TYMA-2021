@@ -1,6 +1,6 @@
-# pydotplot
+# TYMA-2020
 
-A simple C and Python program using matplotlib and numpy for generating dotplots
+A repository containing several programs, methods and utilities for performing sequence comparison.
 
 ## Use
 
@@ -13,13 +13,17 @@ A simple C and Python program using matplotlib and numpy for generating dotplots
 4. Add the following libraries to your python installation:
  - pip install numpy
  - pip install matplotlib
+ 
+## Running dotplots
 
-5. Then run the dotplot generator as "./bin/generate_dotplot fastaX fastaY outdotplot"
+Run the dotplot generator as "./bin/generate_dotplot fastaX fastaY outdotplot"
 
-6. This will generate a dotplot file which you can plot using "python ./bin/dotplot.py outdotplot"
+This will generate a dotplot file which you can plot using "python ./bin/dotplot.py outdotplot"
 
-7. A .png will be created on the folder
+And a .png will be created on the folder
 
-## Example
+## Creating word dictionaries
 
-Run bin/generate_dotplot fastas/hemoglobine.fasta fastas/hemoglobine.fasta output/hemo-dotplot && python bin/dotplot.py output/hemo-dotplot
+Run bin/dictionary fastas/hemoglobine.fasta output/dictionary
+
+A dictionary will be created on folder output/dictionary
