@@ -6,7 +6,7 @@ Code, data and programs for TYMA exercises.
 
 1. First clone or download this repository from: https://github.com/estebanpw/pydotplot
 
-2. If on linux, run "make all" to compile. If on windows, use "gcc src/generate_dotplot.c src/common.c -o bin/generate_dotplot"
+2. If on linux, run "make all" to compile. If on windows, execute the "make-windows.bat" 
 
 3. Make sure you have python 3 installed. You can download it from here: https://www.python.org/downloads/
 
