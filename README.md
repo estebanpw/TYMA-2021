@@ -1,6 +1,6 @@
 # TYMA-2020
 
-A repository containing several programs, methods and utilities for performing sequence comparison.
+Code, data and programs for TYMA exercises.
 
 ## Use
 
