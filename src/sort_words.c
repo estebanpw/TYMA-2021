@@ -21,7 +21,7 @@ int main(int argc, char ** av){
     fclose(d);
 
     // Sort words
-    quick_sort_words_inplace(words, 0, n_words, KSIZE);
+    quick_sort_words_inplace(words, 0, n_words-1, KSIZE);
 
  
 
