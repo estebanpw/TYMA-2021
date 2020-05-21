@@ -37,7 +37,7 @@ char * load_seq(FILE * f, uint32_t * l);
 
 uint32_t get_seq_len(FILE * f);
 
-void generate_kmer_dictionary(char * s, uint32_t l, FILE * dictionary);
+void generate_kmer_dictionary(char * s, uint32_t l, FILE * dictionary, uint32_t k_size);
 
 Word * load_words(FILE * f, uint32_t * n);
 

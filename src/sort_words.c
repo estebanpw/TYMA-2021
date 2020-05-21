@@ -3,8 +3,8 @@
 int main(int argc, char ** av){
    
     // Check parameters 
-    if(argc != 2) {
-        fprintf(stderr, "USE: sort_words dictionary\n"); 
+    if(argc != 4) {
+        fprintf(stderr, "USE: sort_words dictionary outputSortedDict ksize\n"); 
         exit(-1);
     }
     
@@ -12,6 +12,7 @@ int main(int argc, char ** av){
     // Open files for reading
     FILE * d = NULL;
     d = fopen(av[1], "rt"); if(d == NULL) { fprintf(stderr, "Could not open input dictionary file\n"); exit(-1);}  
+	uint32_t k_size = (uint32_t) atoi(av[3]);
 
     // Load words
     uint32_t n_words;
@@ -21,22 +22,19 @@ int main(int argc, char ** av){
     fclose(d);
 
     // Sort words
-    quick_sort_words_inplace(words, 0, n_words-1, KSIZE);
+    quick_sort_words_inplace(words, 0, n_words-1, k_size);
 
  
 
     // Output dictionary file
-    char output_name[MAX_NAME];
-    strcpy(output_name, av[1]);
-    strcat(output_name, ".sort");
-    FILE * sorted_dictionary = fopen(output_name, "wt"); if(sorted_dictionary == NULL) { fprintf(stderr, "Could not open output dictionary file\n"); exit(-1);}
+    FILE * sorted_dictionary = fopen(av[2], "wt"); if(sorted_dictionary == NULL) { fprintf(stderr, "Could not open output dictionary file\n"); exit(-1);}
 
 
     // Write to dictionary
     uint32_t i; 
     for(i=0; i<n_words; i++)
     {
-        fprintf(sorted_dictionary, "%.32s %u\n", words[i].kmer, words[i].pos); 
+        fprintf(sorted_dictionary, "%.*s %u\n", k_size, words[i].kmer, words[i].pos); 
     }
 
 

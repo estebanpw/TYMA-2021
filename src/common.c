@@ -73,14 +73,17 @@ uint32_t get_seq_len(FILE * f)
 
 }
 
-void generate_kmer_dictionary(char * s, uint32_t l, FILE * dictionary)
+void generate_kmer_dictionary(char * s, uint32_t l, FILE * dictionary, uint32_t k_size)
 {
 
     uint32_t i;
-    for(i=0; i<l - KSIZE + 1; i++)
+
+	if(l < k_size) return;
+
+    for(i=0; i<l - k_size + 1; i++)
     {
 
-        fprintf(dictionary, "%.*s %u\n", KSIZE, &s[i], i);
+        fprintf(dictionary, "%.*s %u\n", k_size, &s[i], i);
 
     }
 

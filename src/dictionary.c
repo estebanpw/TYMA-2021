@@ -4,8 +4,8 @@
 int main(int argc, char ** av){
    
     // Check parameters 
-    if(argc != 3) {
-        fprintf(stderr, "USE: dictionary sequence outputdictionary\n"); 
+    if(argc != 4) {
+        fprintf(stderr, "USE: dictionary sequence outputdictionary ksize\n"); 
         exit(-1);
     }
     
@@ -25,9 +25,10 @@ int main(int argc, char ** av){
  
     // Output dictionary file
     FILE * dictionary = fopen(av[2], "wt"); if(dictionary == NULL) { fprintf(stderr, "Could not open output dictionary file\n"); exit(-1);}
+	uint32_t k_size = (uint32_t) atoi(av[3]);
     
     // Generate kmer dictionary 
-    generate_kmer_dictionary(s_query, l_query, dictionary);
+    generate_kmer_dictionary(s_query, l_query, dictionary, k_size);
 
     // Close and exit
     free(s_query);
