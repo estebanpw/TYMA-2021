@@ -13,14 +13,14 @@ FASTAX=$1
 FASTAY=$2
 KSIZE=$3
 
-$BINDIR/dictionary $FASTAX $FASTAX.dict $KSIZE
-$BINDIR/dictionary $FASTAY $FASTAY.dict $KSIZE
+NAMEX=$(basename $FASTAX)
+NAMEY=$(basename $FASTAY)
 
-$BINDIR/sort_words $FASTAX.dict $FASTAX.dict.sort $KSIZE
-$BINDIR/sort_words $FASTAY.dict $FASTAY.dict.sort $KSIZE
+$BINDIR/dictionary $FASTAX $NAMEX.dict $KSIZE
+$BINDIR/dictionary $FASTAY $NAMEY.dict $KSIZE
 
-echo "Output files are"
-echo "	$FASTAX.dict"
-echo "	$FASTAY.dict"
-echo "	$FASTAX.dict.sort"
-echo "	$FASTAY.dict.sort"
+$BINDIR/sort_words $NAMEX.dict $NAMEX.dict.sort $KSIZE
+$BINDIR/sort_words $NAMEY.dict $NAMEY.dict.sort $KSIZE
+
+$BINDIR/hits $NAMEX.dict.sort $NAMEY.dict.sort $NAMEX-$NAMEY.hits $KSIZE
+

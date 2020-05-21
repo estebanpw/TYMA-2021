@@ -1,3 +1,16 @@
+//////////////////////////////////////////////////////
+//
+//                  common.h
+//
+//      Definitions of structures and methods
+//
+//
+//          Author(s): estebanpw, ortrelles
+//
+//////////////////////////////////////////////////////
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -42,3 +55,5 @@ void generate_kmer_dictionary(char * s, uint32_t l, FILE * dictionary, uint32_t 
 Word * load_words(FILE * f, uint32_t * n);
 
 void quick_sort_words_inplace(Word * words, uint32_t x, uint32_t y, uint32_t k_size);
+
+uint32_t generate_hits(Word * d1, Word * d2, uint32_t n_words_d1, uint32_t n_words_d2, FILE * hits_dictionary, uint32_t k_size);

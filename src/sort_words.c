@@ -1,3 +1,15 @@
+//////////////////////////////////////////////////////
+//
+//                  sort_words.c
+//
+//	      Sorts the words in a dictionary
+//
+//
+//          Author(s): estebanpw, ortrelles
+//
+//////////////////////////////////////////////////////
+
+
 #include "common.h"
 
 int main(int argc, char ** av){
@@ -40,6 +52,7 @@ int main(int argc, char ** av){
 
     // Close and exit
     fclose(sorted_dictionary);
+	free(words);
 
     return 0;
     

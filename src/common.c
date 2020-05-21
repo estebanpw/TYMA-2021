@@ -1,3 +1,15 @@
+//////////////////////////////////////////////////////
+//
+//                  common.c
+//
+//	Implementation of the methods for sorting, matching, etc.
+//
+//
+//          Author(s): estebanpw, ortrelles
+//
+//////////////////////////////////////////////////////
+
+
 #include "common.h"
 
 uint32_t estimate_seq_size(FILE * f)
@@ -166,5 +178,26 @@ void quick_sort_words_inplace(Word * words, uint32_t x, uint32_t y, uint32_t k_s
     if (x < y1) quick_sort_words_inplace(words, x, y1, k_size);
     if (x1 < y) quick_sort_words_inplace(words, x1, y, k_size);
 }
+
+
+uint32_t generate_hits(Word * d1, Word * d2, uint32_t n_words_d1, uint32_t n_words_d2, FILE * hits_dictionary, uint32_t k_size)
+{
+	uint32_t n_hits = 0, pos_d1 = 0, pos_d2 = 0;
+	char * kmer = NULL;
+
+
+	// TODO
+	// Complete the method so that every match pair is written to the file
+
+	// ... code to match hits
+
+	fprintf(hits_dictionary, "%.*s %u %u\n", k_size, kmer, pos_d1, pos_d2);
+
+	return n_hits;
+
+}
+
+
+
 
 
