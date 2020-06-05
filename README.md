@@ -27,3 +27,11 @@ And a .png will be created on the folder
 Run bin/dictionary fastas/hemoglobine.fasta output/dictionary
 
 A dictionary will be created on folder output/dictionary
+
+## Sorting word dictionaries
+
+Run bin/sort_words inputDictionary outputSortedDictionary 6
+
+(The inputDictionary must be created with the previous command)
+
+
