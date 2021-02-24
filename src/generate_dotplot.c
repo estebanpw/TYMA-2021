@@ -1,3 +1,14 @@
+//////////////////////////////////////////////////////
+//
+//                  generate_dotplot.c
+//
+//  Generates a dotplot file (coded with 0s and 1s) from two input fasta sequences
+//
+//
+//          Author(s): estebanpw, ortrelles
+//
+//////////////////////////////////////////////////////
+
 #include "common.h"
 
 
