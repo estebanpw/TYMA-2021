@@ -4,7 +4,7 @@ Code, data and programs for TYMA exercises.
 
 ## Use
 
-1. First clone or download this repository from: https://github.com/estebanpw/pydotplot
+1. First clone or download this repository from [here](https://github.com/estebanpw/TYMA-2021)
 
 2. If on linux, run "make all" to compile. If on windows, execute the "make-windows.bat" 
 
