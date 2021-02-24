@@ -1,4 +1,4 @@
-# TYMA-2020
+# TYMA-2021
 
 Code, data and programs for TYMA exercises.
 
