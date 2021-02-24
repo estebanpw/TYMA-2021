@@ -16,22 +16,22 @@ Code, data and programs for TYMA exercises.
  
 ## Running dotplots
 
-Run the dotplot generator as "./bin/generate_dotplot fastaX fastaY outdotplot"
+Run the dotplot generator as `./bin/generate_dotplot fastaX fastaY outdotplot`
 
-This will generate a dotplot file which you can plot using "python ./bin/dotplot.py outdotplot"
+This will generate a dotplot file which you can plot using `python ./bin/dotplot.py outdotplot`
 
-And a .png will be created on the folder
+And a `.png` file will be created on the folder
 
 ## Creating word dictionaries
 
-Run bin/dictionary fastas/hemoglobine.fasta output/dictionary
+Run `bin/dictionary fastas/hemoglobine.fasta output/dictionary`
 
-A dictionary will be created on folder output/dictionary
+A dictionary will be created on folder `output` with name `dictionary`
 
 ## Sorting word dictionaries
 
-Run bin/sort_words inputDictionary outputSortedDictionary 6
+Run `bin/sort_words inputDictionary outputSortedDictionary 6`
 
-(The inputDictionary must be created with the previous command)
+(The `inputDictionary` must be created with the previous command)
 
 
