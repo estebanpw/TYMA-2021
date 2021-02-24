@@ -85,6 +85,28 @@ uint32_t get_seq_len(FILE * f)
 
 }
 
+char * reverse_complement(char * in, uint32_t seq_size)
+{
+
+    char * rc = NULL;
+    rc = (char *) malloc(seq_size * sizeof(char));
+    if(rc == NULL) {fprintf(stderr, "Could not allocate memory for sequence.\n"); exit(-1);}
+
+    uint32_t i;
+    for(i=0; i<seq_size; i++)
+    {
+         char complement = 'N';
+         if(in[i] == 'A') complement = 'T';
+         if(in[i] == 'C') complement = 'G';
+         if(in[i] == 'G') complement = 'C';
+         if(in[i] == 'T') complement = 'A';
+         rc[seq_size-(i+1)] = complement;
+    }
+
+    return rc;
+
+}
+
 void generate_kmer_dictionary(char * s, uint32_t l, FILE * dictionary, uint32_t k_size)
 {
 
