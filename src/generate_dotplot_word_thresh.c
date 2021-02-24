@@ -1,3 +1,16 @@
+//////////////////////////////////////////////////////
+//
+//           generate_dotplot_word_thresh.c.c
+//
+//  Generates a dotplot file (coded with 0s and 1s) from two input fasta sequences
+//  using a given word size for matches (e.g. W=1 for single nucleotide comparison)
+//  If the attained score by two words is above or equal to the threshold T, then
+//  it is written to file. This allows for inexact matches.
+//
+//          Author(s): estebanpw, ortrelles
+//
+//////////////////////////////////////////////////////
+
 #include "common.h"
 
 
