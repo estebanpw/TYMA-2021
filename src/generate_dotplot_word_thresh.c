@@ -12,9 +12,13 @@
 //////////////////////////////////////////////////////
 
 #include "common.h"
+#include "time.h"
 
 int main(int argc, char **av)
 {
+
+    // Start timestamp for benchmark purposes
+    clock_t begin = clock();
 
     if (argc != 6)
     {
@@ -92,10 +96,20 @@ int main(int argc, char **av)
         }
     }
 
-    // Close and exit
+    // Free memory
     free(s_query);
     free(s_ref);
     fclose(dotplot);
+
+    // CPU time computing for benchmark purposes
+    clock_t end = clock();
+    double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+
+    // Output stats
+    fprintf(stderr, " > generate_dotplot\n");
+    fprintf(stderr, " > Word: %d, Threshold: %d\n", W, T);
+    fprintf(stderr, " > Input sizes: %d and %d\n", l_query, l_ref);
+    fprintf(stderr, " > CPU time: %2.3lf s", time_spent);
 
     return 0;
 }
