@@ -22,7 +22,7 @@ int main(int argc, char **av)
 
     if (argc != 6)
     {
-        fprintf(stderr, "USE: generate_dotplot s1 s2 W T output\n");
+        fprintf(stderr, "Usage: generate_dotplot <s1> <s2> <W> <T> <output>\n");
         exit(-1);
     }
 
@@ -37,7 +37,7 @@ int main(int argc, char **av)
     ref = fopen(av[2], "rt");
     if (ref == NULL)
     {
-        fprintf(stderr, "Could not open input ref   file\n");
+        fprintf(stderr, "Could not open input ref file\n");
         exit(-1);
     }
 
