@@ -1,6 +1,6 @@
 # TyMA-2020
 
-## Inde
+## Index
 
 - [1. Downloading this repository](#1.-Downloading-this-repository)
 - [2. Installing C compiler, Python and dependencies](#2.-Installing-C-compiler,-Python-and-dependencies)
