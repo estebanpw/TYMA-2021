@@ -90,6 +90,8 @@ char * reverse_complement(char * in, uint32_t seq_size)
     // TODO
     // Complete the method
 
+    // Remember to change the return
+    return NULL;
 }
 
 void generate_kmer_dictionary(char * s, uint32_t l, FILE * dictionary, uint32_t k_size)
