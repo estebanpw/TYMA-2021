@@ -1,4 +1,4 @@
-# TyMA-2020
+# TyMA-2021
 
 ## Index
 
@@ -33,7 +33,9 @@ In order to use this program, you need to install:
 
 ## 3. C compiler
 
-MinGW compiler is recommended. It can be downloaded from:
+If you are using Linux, you most probably have already the `gcc` compiler installed and on the path.
+
+For Windows, MinGW compiler is recommended. It can be downloaded from:
 
 [http://mingw-w64.org/doku.php/download](http://mingw-w64.org/doku.php/download).
 
@@ -54,11 +56,13 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 ## 4. Installing Python 3.x
 
-Python can be downloaded from:
+Python comes preinstalled on most Linux distributions, and is available as a package on all others.
+
+For Windows, Python can be downloaded from:
 
 [https://www.python.org/downloads/](https://www.python.org/downloads/).
 
-**Attention! Make sure to check** `Add Python 3.x to PATH` when installing. Otherwise, you will have to do it manually.
+**Attention! Make sure to check "Add Python 3.x to PATH" when installing. Otherwise, you will have to do it manually.**
 
 ![python installer](./assets/tutorial-1.png)
 
@@ -78,7 +82,7 @@ You can install both with
 
 ```bash
 pip install numpy
-pip isntall matplotlib
+pip install matplotlib
 ```
 
 ## 6. Compiling C code
@@ -127,9 +131,9 @@ where:
 The final step is generating the image dotplot from the plain file generated with C, to use it, execute:
 
 ```bash
-python .\src\dotplot.py <generated file>
+python ./src/dotplot.py <generated file>
 ```
 
 The result will be saved in `./results/` and it will look like this:
 
-![dotplot example](./assets/dotplotF5-CH.png)
+![dotplot example](./assets/dotplotF10-HM.png)
