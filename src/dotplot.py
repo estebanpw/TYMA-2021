@@ -10,8 +10,7 @@ input = np.loadtxt(sys.argv[1], dtype='i', delimiter=' ')
 
 mshape = input.shape
 
-print(f' > Input shape: {mshape}')
-# print(input)
+print(' > Input shape: {}'.format(mshape))
 
 # Add a border to the plot
 
