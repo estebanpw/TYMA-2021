@@ -109,7 +109,7 @@ int main(int argc, char **av)
     fprintf(stdout, " > generate_dotplot\n");
     fprintf(stdout, " > Word: %d, Threshold: %d\n", W, T);
     fprintf(stdout, " > Input sizes: %d and %d\n", l_query, l_ref);
-    fprintf(stdout, " > CPU time: %2.3lf s", time_spent);
+    fprintf(stdout, " > CPU time: %2.3lf s\n", time_spent);
 
     return 0;
 }
